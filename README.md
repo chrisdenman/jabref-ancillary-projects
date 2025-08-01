@@ -10,6 +10,6 @@ To toil on [JabRef](https://github.com/JabRef/jabref) reproductions/fixes/invest
 
 ## Ancillary Projects
 
-| JabRef Issue | Branch Name | Notes                                                                       |
-|--------------|-------------|-----------------------------------------------------------------------------|
-| [PDF not opening in standard application #12356](https://github.com/JabRef/jabref/issues/12356)         | #12356-pdf-not-opening-in-standard-application            | Reproduction & mitigation issue Vagrant |
+| JabRef Issue | Branch Name | Notes                                   |
+|--------------|-------------|-----------------------------------------|
+| [PDF not opening in standard application #12356](https://github.com/JabRef/jabref/issues/12356)         | #12356-pdf-not-opening-in-standard-application            | Reproduction & mitigation using Vagrant |
