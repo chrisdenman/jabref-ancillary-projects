@@ -8,7 +8,7 @@ To toil on [JabRef](https://github.com/JabRef/jabref) reproductions/fixes/invest
 - Branch named prefixed with the corresponding [JabRef](https://github.com/JabRef/jabref) issue's key, for example
   `#12356-pdf-not-opening-in-standard-application--minimial-vagrant-reproduction`
 
-## Ancillary Projects
+## Ancillary Project Branches
 
 | JabRef Issue                                                                                    | Branch Name                                    | Notes                                   |
 |-------------------------------------------------------------------------------------------------|------------------------------------------------|-----------------------------------------|
@@ -26,4 +26,6 @@ The new branch is not related to `main`, it stands in its own right. It is not m
 
 ### Switch to Your Branch, Toil & Commit...
 
-### Add a Line in [Ancillary Projects](#)
+### Add a Line in [Ancillary Project Branches](#ancillary-project-branches)
+
+## [License](LICENSE)
