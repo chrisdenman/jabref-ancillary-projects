@@ -1,3 +1,5 @@
-/.idea
-/mitigation/.gradle/
+/.idea/
+**/.gradle/
 /mitigation/build/
+/reproduction/build/
+**/.vagrant/

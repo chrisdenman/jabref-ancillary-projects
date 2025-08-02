@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+
+  # https://github.com/caspermeijn/vagrant-ubuntu-desktop
+  config.vm.define "ubuntu" do |config|
+    config.vm.box = "caspermeijn/ubuntu-desktop-24.04" # ubuntu:GNOME / org.gnome.Evince.desktop
+    config.vm.box_version = "2025.03.07"
+    config.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+      vb.memory = "2048"
+      vb.customize ["modifyvm", :id, "--vram", "128"] # https://www.virtualbox.org/manual/ch08.html#vboxmanage-cmd-overview
+    end
+    config.vm.box_check_update = false
+    config.vm.synced_folder ".", "/vagrant", disabled: true
+    config.vm.provision "file", source: "../reproduction", destination: "reproduction"
+    config.vm.provision "file", source: "../mitigation", destination: "mitigation"
+    config.vm.provision "file", source: "vagrant_provisioning.sh", destination: "vagrant_provisioning.sh"
+    config.vm.provision "file", source: "test.sh", destination: "test.sh"
+    config.vm.provision "shell", path: "root_provisioning.sh", :args => "ubuntu"
+  end
+
+  # https://github.com/alvistack/vagrant-opensuse
+  # https://www.osboxes.org/opensuse/
+  config.vm.define "opensuse" do |config|
+    config.vm.box = "opensuse/Leap-15.6.x86_64"
+    config.vm.box_version = "15.6.13.356"
+    config.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+      vb.memory = "2048"
+      vb.customize ["modifyvm", :id, "--vram", "128"] # https://www.virtualbox.org/manual/ch08.html#vboxmanage-cmd-overview
+    end
+    config.vm.box_check_update = false
+    config.vm.synced_folder ".", "/vagrant", disabled: true
+    config.vm.provision "file", source: "../reproduction", destination: "reproduction"
+    config.vm.provision "file", source: "../mitigation", destination: "mitigation"
+    config.vm.provision "file", source: "vagrant_provisioning.sh", destination: "vagrant_provisioning.sh"
+    config.vm.provision "file", source: "test.sh", destination: "test.sh"
+    config.vm.provision "shell", path: "root_provisioning.sh", :args => "openSUSE"
+  end
+end
