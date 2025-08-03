@@ -10,9 +10,10 @@ To toil on [JabRef](https://github.com/JabRef/jabref) reproductions/fixes/invest
 
 ## Ancillary Project Branches
 
-| JabRef Issue                                                                                    | Branch Name                                    | Notes                                   |
-|-------------------------------------------------------------------------------------------------|------------------------------------------------|-----------------------------------------|
-| [PDF not opening in standard application #12356](https://github.com/JabRef/jabref/issues/12356) | #12356-pdf-not-opening-in-standard-application | Reproduction & mitigation using Vagrant |
+| JabRef Issue                                                                                    | Branch Name                                    | Notes                                                                                  |
+|-------------------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------------------------------------------------------|
+| [PDF not opening in standard application #12356](https://github.com/JabRef/jabref/issues/12356) | #12356-pdf-not-opening-in-standard-application | Reproduction & mitigation using Vagrant                                                |
+| [Fix APS fetcher #12864](https://github.com/JabRef/jabref/issues/12864)                         | #12864-fix-aps-fetcher--testing-with-selenium  | Java / Gradle / SDKMAN! projec to scrape text from CloudFlare protected PDF resources. |
 
 ## Creating an Ancillary Project
 
