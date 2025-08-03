@@ -12,7 +12,7 @@ for gradle_project_name in reproduction mitigation; do
 done
 
 cd virtualisation || exit 1
-for vagrant_box_name in $(grep -oP "(?<=config\.vm\.define).*(\")" ./Vagrantfile | tr -d ' "'); do
+for vagrant_box_name in $(grep -v "^\s*#.*$" ./Vagrantfile | grep -oP "(?<=config\.vm\.define).*(\")" | tr -d ' "'); do
   echo "Testing environment \"${vagrant_box_name}\""
   vagrant destroy "${vagrant_box_name}" -f
   vagrant up "${vagrant_box_name}"  || exit 1
