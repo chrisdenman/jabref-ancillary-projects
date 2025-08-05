@@ -9,7 +9,8 @@ case $1 in
     zypper -n update
     zypper addrepo --no-gpgcheck https://download.opensuse.org/repositories/zypp:SLE-15-SP6-Branch/openSUSE_Leap_15.6/zypp:SLE-15-SP6-Branch.repo
 
-    zypper -n install kernel-devel gcc make patterns-kde-kde sddm virtualbox-guest-tools zip unzip konsole dolphin okular xdg-utils firefox gnome-vfs2
+    zypper -n install kernel-devel gcc make patterns-kde-kde sddm virtualbox-guest-tools zip unzip konsole dolphin \
+      okular xdg-utils firefox gnome-vfs2
 
     sudo systemctl enable sddm.service
     sudo systemctl enable vboxservice.service

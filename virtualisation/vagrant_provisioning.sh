@@ -9,5 +9,5 @@ sed --in-place'' \
   --expression "s/sdkman_auto_answer=false/sdkman_auto_answer=true/" \
   "$HOME/.sdkman/etc/config"
 . "$HOME/.sdkman/bin/sdkman-init.sh"
-cd mitigation || exit 1
-sdk env install # Have to do this as SDKMAN! auto environment detection and configuration not working :(
+cd reproduction || exit 1
+sdk env install

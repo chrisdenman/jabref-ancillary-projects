@@ -5,7 +5,7 @@ if [ $(basename $(pwd)) != "jabref-ancillary-projects" ]; then
   exit 1
 fi
 
-for gradle_project_name in reproduction mitigation; do
+for gradle_project_name in reproduction; do
   cd "${gradle_project_name}" || exit 1
   ./gradlew clean
   cd - || exit 1
@@ -17,7 +17,7 @@ for vagrant_box_name in $(grep -v "^\s*#.*$" ./Vagrantfile | grep -oP "(?<=confi
   vagrant destroy "${vagrant_box_name}" -f
   vagrant up "${vagrant_box_name}"  || exit 1
   vagrant reload "${vagrant_box_name}"  || exit 1
-  echo "Please execute the Gradle tests on the Vagrant box by running the \"/home/vagrant/test.sh\" script."
+  echo "Please execute your tests on the Vagrant box by running the \"/home/vagrant/test.sh\" script."
   printf 'Press any key to continue... '
   # disable echo
   stty -echo
