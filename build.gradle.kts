@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("or.jabref.Main")
+    mainClass.set("org.jabref.Main")
 }
 
 javafx {
