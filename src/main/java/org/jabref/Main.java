@@ -17,11 +17,11 @@ public class Main extends Application {
         TextArea ta2 = new TextArea();
 
         MenuItem item1 = new MenuItem("Insert \"Hello\"");
-        item1.setOnAction((ActionEvent) -> ta1.setText("Hello"));
+        item1.setOnAction((ignored) -> ta1.setText("Hello"));
         item1.setAccelerator(KeyCombination.keyCombination("Ctrl+I"));
 
         MenuItem item2 = new MenuItem("Insert \"World!\"");
-        item2.setOnAction((ActionEvent) -> ta2.setText("World!"));
+        item2.setOnAction((ignored) -> ta2.setText("World!"));
         item2.setAccelerator(KeyCombination.keyCombination("Ctrl+I"));
 
         ContextMenu context1 = new ContextMenu();
