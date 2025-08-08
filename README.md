@@ -14,6 +14,7 @@ To toil on [JabRef](https://github.com/JabRef/jabref) reproductions/fixes/invest
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [PDF not opening in standard application #12356](https://github.com/JabRef/jabref/issues/12356) | #12356-pdf-not-opening-in-standard-application                 | Reproduction & mitigation using Vagrant                                           |
 | [Fix APS fetcher #12864](https://github.com/JabRef/jabref/issues/12864)                         | #12864-fix-aps-fetcher--testing-with-selenium                  | Scraping text from CloudFlare protected PDF resources using Selenium.             |
+| [Fix APS fetcher #12864](https://github.com/JabRef/jabref/issues/12864)                         | #12864-fix-aps-fetcher--testing-with-webview                   | Seeing if JavaFX WebView helps.                                                   |
 | [Shortcut Ctrl+R does not work #12564](https://github.com/JabRef/jabref/issues/12564)           | #12564-shortcut-ctrl+r-does-not-work--accelerator_architecture | Demonstrating that accelerators are scoped to the scene and key combination only. |
 
 ## Creating an Ancillary Project
